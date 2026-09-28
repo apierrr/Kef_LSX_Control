@@ -52,10 +52,6 @@ docker compose up -d
 
 L'interface est disponible sur `http://<ton-serveur>:8765`.
 
-> Le `docker-compose.yml` démarre aussi un service `lms` (Lyrion Music Server) qui sert
-> à diffuser la musique vers l'enceinte en UPnP/DLNA. Si tu ne veux que le contrôle KEF,
-> supprime ce service : `docker compose up -d kef-control`.
-
 ## Mise à jour de l'IP
 
 Modifier `KEF_IP` dans `.env` puis :
@@ -115,6 +111,3 @@ docker compose logs -f kef-control
   l'app desktop d'origine.
 - Quand l'enceinte est éteinte, certaines lectures peuvent échouer : l'UI
   affiche alors "Hors ligne" et retente toutes les 5 s.
-- Les données runtime de LMS (`lms-config/`, `lms-music/`, `lms-playlists/`) ne sont
-  pas versionnées : elles contiennent les jetons d'authentification des plugins,
-  les logs et un cache de plusieurs centaines de Mo.
