@@ -1,8 +1,3 @@
-# Données runtime de LMS (jetons Qobuz, logs, cache, ~500 Mo) — jamais versionnées
-lms-config/
-lms-music/
-lms-playlists/
-
 # Config locale
 .env
 .claude/
